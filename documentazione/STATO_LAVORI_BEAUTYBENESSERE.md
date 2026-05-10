@@ -88,6 +88,24 @@ Nessuno.
 ## File eliminati nello Step 002
 Nessuno.
 
+
+### Fix Step 003 — Design scheda attività premium
+- Migliorato il design della scheda attività pubblica per renderlo più coerente con homepage e pagina risultati demo.
+- Rifatto il pannello visuale destro della hero con composizione stile mappa, marker grafici, card informativa e mini-card riepilogative.
+- Preservato il fix `tsconfig.json` con alias `@/*` necessario per deploy Vercel.
+
+## File creati nel Fix Step 003 Design
+- documentazione/report/REPORT_STEP_003_FIX_DESIGN_SCHEDA_PREMIUM.md
+
+## File modificati nel Fix Step 003 Design
+- app/attivita/[slug]/page.tsx
+- app/globals.css
+- documentazione/STATO_LAVORI_BEAUTYBENESSERE.md
+- documentazione/PROGETTO_CONTESTO_BEAUTYBENESSERE.md
+
+## File eliminati nel Fix Step 003 Design
+Nessuno.
+
 ## Prossime attività consigliate
 1. Creare modulo “Rivendica attività” dedicato.
 2. Definire dataset demo più completo per attività/città/categorie.
@@ -98,3 +116,9 @@ Nessuno.
 
 ## Note importanti
 Ogni futura modifica deve aggiornare i file `.md` quando introduce decisioni, regole o cambiamenti importanti.
+
+## Step 003 — Fix design scheda attività editoriale premium
+- Scheda attività rifatta in stile più vicino alle demo premium approvate.
+- Hero fotografica/editoriale con logo-card attività, badge, località e azioni rapide.
+- Layout contenuti a due colonne con descrizione, servizi, gallery demo, attività simili, contatti, orari, mappa e box rivendicazione.
+- Preservato il fix stabile `tsconfig.json` per alias `@/*`.

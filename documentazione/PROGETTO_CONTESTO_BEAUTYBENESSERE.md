@@ -110,3 +110,23 @@ Vincoli confermati:
 - nessuna integrazione reale Google Maps nello Step 003;
 - dati demo locali in attesa di modello Firestore definitivo;
 - scheda già collegata dalla pagina risultati tramite slug.
+
+
+## Decisione UI v0.4.1 — Fix design scheda attività
+Dopo il primo deploy dello Step 003, la scheda attività pubblica è stata rifinita perché il design risultava meno premium rispetto alle demo approvate di homepage e pagina risultati.
+
+Aggiornamenti confermati:
+- il blocco destro della hero deve essere più ricco e scenografico, non vuoto;
+- usare composizione stile mappa/marker coerente con il concept directory nazionale;
+- mantenere palette avorio, bianco caldo, oro soft, verde salvia e antracite;
+- preservare leggibilità e font size minimi del design system;
+- non regredire `tsconfig.json`: deve restare con `baseUrl` e `paths` per gli alias `@/*`.
+
+## Decisione UI — Scheda attività pubblica premium
+La scheda attività pubblica deve seguire lo stile delle demo approvate: visual editoriale ampio, atmosfera beauty/wellness, logo-card attività, azioni rapide ben visibili e contenuti organizzati come una directory premium. Evitare hero troppo vuote o solo astratte: la scheda deve sembrare una pagina attività reale, elegante e ricca.
+
+## File stabile protetto
+`tsconfig.json` deve mantenere il fix per Vercel e alias `@/*`:
+- `"baseUrl": "."`
+- `"paths": { "@/*": ["./*"] }`
+Non regredire questo file negli ZIP futuri.

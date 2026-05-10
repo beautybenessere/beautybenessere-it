@@ -44,6 +44,9 @@ export function generateMetadata({ params }: ActivityPageProps): Metadata {
   };
 }
 
+const serviceIcons = ["✦", "◒", "♢", "✧", "○", "☾"];
+const galleryLabels = ["Reception", "Cabina", "Trattamento", "Relax", "Prodotti"];
+
 export default function ActivityPage({ params }: ActivityPageProps) {
   const business = getBusinessBySlug(params.slug);
 
@@ -53,6 +56,11 @@ export default function ActivityPage({ params }: ActivityPageProps) {
 
   const mapQuery = encodeURIComponent(`${business.name} ${business.address} ${business.city}`);
   const phoneHref = `tel:${business.phone.replaceAll(" ", "")}`;
+  const whatsappHref = `https://wa.me/${business.phone.replace(/\D/g, "")}`;
+  const similarBusinesses = resultsBusinesses
+    .filter((item) => item.slug !== business.slug)
+    .slice(0, 4);
+
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -82,7 +90,7 @@ export default function ActivityPage({ params }: ActivityPageProps) {
   };
 
   return (
-    <main>
+    <main className="activity-profile-page">
       <Header />
 
       <script
@@ -90,118 +98,111 @@ export default function ActivityPage({ params }: ActivityPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
 
-      <section className="activity-hero" aria-label={`Scheda attività ${business.name}`}>
-        <div className="activity-hero-copy">
-          <a className="back-link" href="/risultati">← Torna ai risultati</a>
-          <div className="activity-category-row">
-            <span className="eyebrow">Scheda attività</span>
-            <span>{business.category}</span>
-          </div>
+      <section className="activity-profile-hero" aria-label={`Scheda attività ${business.name}`}>
+        <div className="activity-cover-art" aria-hidden="true" />
+        <div className="activity-cover-overlay" />
 
+        <div className="activity-logo-card" aria-hidden="true">
+          <span>{business.name.split(" ").slice(0, 2).map((word) => word[0]).join("")}</span>
+          <strong>{business.name}</strong>
+          <small>{business.category}</small>
+        </div>
+
+        <div className="activity-hero-content">
+          <a className="activity-back-pill" href="/risultati">← Torna ai risultati</a>
+          <span className="activity-category-pill">{business.category}</span>
           <h1>{business.name}</h1>
-          <p>{business.description}</p>
-
+          <p className="activity-location">⌖ {business.city}, {business.region}</p>
           <div className="activity-badges" aria-label="Badge attività">
             {business.isVerified && <span className="badge verified-badge">Verificato</span>}
             {business.isPremium && <span className="badge premium-badge">Premium</span>}
-            {business.hasOnlineBooking && <span className="badge booking-badge">Prenotazione online disponibile</span>}
-          </div>
-
-          <div className="activity-hero-actions">
-            <a className="activity-primary-action" href={phoneHref}>Chiama ora</a>
-            <a href={`https://www.google.com/maps/search/?api=1&query=${mapQuery}`}>Indicazioni</a>
-            {business.hasOnlineBooking ? <a href="#prenota">Prenota</a> : <a href="#rivendica">Rivendica attività</a>}
-          </div>
-        </div>
-
-        <div className="activity-photo-panel" aria-hidden="true">
-          <div className="activity-photo-main">
-            <span>{business.category}</span>
-          </div>
-          <div className="activity-photo-grid">
-            <span>Ambiente</span>
-            <span>Servizi</span>
-            <span>Dettagli</span>
+            {business.hasOnlineBooking && <span className="badge booking-badge">Prenotazione online</span>}
           </div>
         </div>
       </section>
 
-      <section className="activity-layout">
-        <div className="activity-main-column">
-          <article className="activity-card">
-            <span className="eyebrow">Descrizione</span>
-            <h2>Informazioni su {business.name}</h2>
+      <nav className="activity-action-bar" aria-label="Azioni rapide attività">
+        <a href={phoneHref}>☏ Chiama</a>
+        <a href={whatsappHref}>WhatsApp</a>
+        <a href={`https://www.google.com/maps/search/?api=1&query=${mapQuery}`}>⌖ Indicazioni</a>
+        <a className="activity-action-primary" href={business.hasOnlineBooking ? "#prenota" : "#rivendica"}>▣ Prenota</a>
+        <a href={business.website}>◎ Sito web</a>
+      </nav>
+
+      <section className="activity-profile-layout">
+        <div className="activity-profile-main">
+          <article className="activity-profile-section">
+            <h2>Descrizione</h2>
             <p>{business.longDescription}</p>
           </article>
 
-          <article className="activity-card">
-            <span className="eyebrow">Servizi</span>
-            <h2>Servizi principali</h2>
-            <div className="activity-service-grid">
-              {business.services.map((service) => (
-                <span key={service}>{service}</span>
+          <article className="activity-profile-section">
+            <div className="activity-section-title-row">
+              <h2>Servizi</h2>
+              <a href="#prenota">Vedi tutti</a>
+            </div>
+            <div className="activity-service-icons">
+              {business.services.map((service, index) => (
+                <span key={service}>
+                  <i>{serviceIcons[index % serviceIcons.length]}</i>
+                  <strong>{service}</strong>
+                </span>
               ))}
             </div>
           </article>
 
-          <article className="activity-card">
-            <span className="eyebrow">Punti di forza</span>
-            <h2>Perché sceglierla</h2>
-            <div className="activity-highlight-grid">
+          <article className="activity-profile-section activity-gallery-section">
+            <div className="activity-section-title-row">
+              <h2>Galleria foto</h2>
+              <a href="#foto">Vedi tutte le foto</a>
+            </div>
+            <div className="activity-gallery-grid" id="foto">
+              {galleryLabels.map((label, index) => (
+                <span key={label} className={`gallery-tile gallery-tile-${index + 1}`}>
+                  <small>{label}</small>
+                </span>
+              ))}
+            </div>
+          </article>
+
+          <article className="activity-profile-section">
+            <h2>Punti di forza</h2>
+            <div className="activity-strength-list">
               {business.highlights.map((highlight) => (
-                <div key={highlight}>
-                  <strong>{highlight}</strong>
-                  <p>Informazione demo predisposta per essere sostituita dai dati reali caricati dal gestore o dall&apos;admin.</p>
-                </div>
+                <span key={highlight}>✓ {highlight}</span>
               ))}
             </div>
           </article>
 
-          <article className="activity-card" id="rivendica">
-            <div className="claim-card-content">
-              <div>
-                <span className="eyebrow">Gestore attività</span>
-                <h2>Questa è la tua attività?</h2>
-                <p>
-                  Rivendica la scheda per aggiornare informazioni, servizi, orari, foto e contatti quando sarà attiva l&apos;area gestore di BeautyBenessere.it.
-                </p>
-              </div>
-              <a className="activity-primary-action" href="mailto:claim@beautybenessere.it">Rivendica attività</a>
+          <article className="activity-profile-section">
+            <div className="activity-section-title-row">
+              <h2>Attività simili nei dintorni</h2>
+              <a href="/risultati">Vedi tutte</a>
+            </div>
+            <div className="activity-similar-grid">
+              {similarBusinesses.map((item) => (
+                <a key={item.slug} href={`/attivita/${item.slug}`}>
+                  <span>{item.name.split(" ").slice(0, 2).map((word) => word[0]).join("")}</span>
+                  <strong>{item.name}</strong>
+                  <small>{item.city} · {item.distanceLabel}</small>
+                  <em>{item.priceLabel}</em>
+                </a>
+              ))}
             </div>
           </article>
         </div>
 
-        <aside className="activity-side-column" aria-label="Informazioni rapide attività">
-          <section className="activity-info-card">
-            <h2>Contatti</h2>
-            <dl>
-              <div>
-                <dt>Telefono</dt>
-                <dd><a href={phoneHref}>{business.phone}</a></dd>
-              </div>
-              <div>
-                <dt>Email</dt>
-                <dd><a href={`mailto:${business.email}`}>{business.email}</a></dd>
-              </div>
-              <div>
-                <dt>Sito</dt>
-                <dd><a href={business.website}>{business.website.replace("https://", "")}</a></dd>
-              </div>
-            </dl>
+        <aside className="activity-profile-side" aria-label="Informazioni rapide attività">
+          <section className="activity-claim-box" id="rivendica">
+            <span>♕</span>
+            <h2>Sei il proprietario di questa attività?</h2>
+            <p>Rivendica la scheda per gestire orari, servizi, foto, contatti e visibilità.</p>
+            <a href="mailto:claim@beautybenessere.it">Rivendica la scheda</a>
           </section>
 
-          <section className="activity-info-card">
-            <h2>Dove si trova</h2>
-            <p className="activity-address">{business.address}, {business.city} ({business.province})</p>
-            <div className="activity-mini-map" aria-label="Mappa demo attività">
-              <span>{business.city}</span>
-            </div>
-            <a className="side-link" href={`https://www.google.com/maps/search/?api=1&query=${mapQuery}`}>Apri indicazioni</a>
-          </section>
-
-          <section className="activity-info-card">
+          <section className="activity-side-card">
             <h2>Orari</h2>
-            <div className="hours-list">
+            <div className="activity-hours-table">
               {business.openingHours.map((item) => (
                 <div key={item.day}>
                   <span>{item.day}</span>
@@ -211,16 +212,25 @@ export default function ActivityPage({ params }: ActivityPageProps) {
             </div>
           </section>
 
-          <section className="activity-info-card">
-            <h2>Informazioni utili</h2>
-            <div className="activity-chip-list">
-              <span>{business.plan}</span>
-              <span>{business.priceLabel}</span>
-              <span>{business.distanceLabel}</span>
-              {business.amenities.map((amenity) => (
-                <span key={amenity}>{amenity}</span>
-              ))}
+          <section className="activity-side-card">
+            <h2>Contatti</h2>
+            <ul className="activity-contact-list">
+              <li>☏ <a href={phoneHref}>{business.phone}</a></li>
+              <li>✉ <a href={`mailto:${business.email}`}>{business.email}</a></li>
+              <li>◎ <a href={business.website}>{business.website.replace("https://", "")}</a></li>
+              <li>⌖ {business.address}, {business.city} ({business.province})</li>
+            </ul>
+          </section>
+
+          <section className="activity-map-card">
+            <div className="activity-map-visual" aria-label="Mappa demo attività">
+              <span>{business.city}</span>
             </div>
+          </section>
+
+          <section className="activity-side-card activity-save-card">
+            <a href="#preferiti">♡ Salva nei preferiti</a>
+            <a href="#condividi">⌯ Condividi</a>
           </section>
         </aside>
       </section>
