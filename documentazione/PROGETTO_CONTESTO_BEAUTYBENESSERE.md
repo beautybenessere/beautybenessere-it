@@ -148,3 +148,15 @@ Vincoli confermati:
 - non collegare ancora Firebase;
 - non introdurre Google Maps reale nello Step 004;
 - preservare il fix stabile di `tsconfig.json` con `baseUrl` e `paths` per alias `@/*`.
+
+## Decisione UI v0.5.1 — Hero homepage più equilibrata
+La homepage master deve mantenere lo stile dello screen 1, ma con proporzioni più controllate:
+- titolo grande ma non eccessivo;
+- immagine hero calda, luminosa e meno zoomata;
+- overlay morbido, non troppo pesante;
+- box ricerca compatto, elegante e ben integrato;
+- passaggio verso le categorie più armonioso.
+
+La homepage resta il riferimento visivo da cui allineare risultati e scheda attività nei prossimi step.
+
+Nota tecnica stabile: `tsconfig.json` non deve regredire e deve mantenere `baseUrl` e `paths` per gli alias `@/*`.

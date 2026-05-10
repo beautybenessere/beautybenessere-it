@@ -148,3 +148,23 @@ Ogni futura modifica deve aggiornare i file `.md` quando introduce decisioni, re
 
 ## File eliminati nello Step 004
 Nessuno.
+
+## Fix Step 004 — Homepage hero più equilibrata
+- Hero homepage rifinita per essere più vicina allo screen 1 di riferimento.
+- Titolo ridotto e reso più proporzionato su desktop.
+- Immagine hero resa meno zoomata, meno tagliata e più calda/luminosa.
+- Overlay/gradiente alleggerito per mantenere leggibilità senza appesantire il visual.
+- Box ricerca reso più compatto e premium.
+- Spaziatura tra hero e categorie leggermente migliorata.
+- Preservato il fix stabile `tsconfig.json` con `baseUrl` e `paths` per alias `@/*`.
+
+## File creati nel Fix Step 004 Hero
+- documentazione/report/REPORT_STEP_004_FIX_HOMEPAGE_HERO_EQUILIBRATA.md
+
+## File modificati nel Fix Step 004 Hero
+- app/globals.css
+- documentazione/STATO_LAVORI_BEAUTYBENESSERE.md
+- documentazione/PROGETTO_CONTESTO_BEAUTYBENESSERE.md
+
+## File eliminati nel Fix Step 004 Hero
+Nessuno.
