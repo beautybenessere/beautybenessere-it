@@ -122,3 +122,29 @@ Ogni futura modifica deve aggiornare i file `.md` quando introduce decisioni, re
 - Hero fotografica/editoriale con logo-card attività, badge, località e azioni rapide.
 - Layout contenuti a due colonne con descrizione, servizi, gallery demo, attività simili, contatti, orari, mappa e box rivendicazione.
 - Preservato il fix stabile `tsconfig.json` per alias `@/*`.
+
+## Step 004 — Restyle homepage master da screen 1
+- Homepage pubblica rifatta come base visiva maestra del portale.
+- Nuovo header globale più editoriale, con logo loto oro, navigazione pulita e bottone Accedi più leggero.
+- Hero homepage in stile riferimento: testo a sinistra, atmosfera fotografica beauty/spa a destra e ricerca premium integrata.
+- Sezione categorie rifatta con card compatte, icone oro e layout ordinato.
+- Aggiunto teaser mappa con marker grafici e CTA “Apri la mappa”.
+- Rifatta area città in evidenza con card visuali.
+- Rifatto box gestori/rivendicazione attività in stile premium caldo.
+- Aggiunta fascia segnali fiducia.
+- Preservato il fix stabile `tsconfig.json` con `baseUrl` e `paths` per alias `@/*`.
+
+## File creati nello Step 004
+- documentazione/report/REPORT_STEP_004_RESTYLE_HOMEPAGE_MASTER.md
+
+## File modificati nello Step 004
+- app/page.tsx
+- app/globals.css
+- components/Header.tsx
+- package.json
+- README.md
+- documentazione/STATO_LAVORI_BEAUTYBENESSERE.md
+- documentazione/PROGETTO_CONTESTO_BEAUTYBENESSERE.md
+
+## File eliminati nello Step 004
+Nessuno.

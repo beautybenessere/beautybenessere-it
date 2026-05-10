@@ -130,3 +130,21 @@ La scheda attività pubblica deve seguire lo stile delle demo approvate: visual 
 - `"baseUrl": "."`
 - `"paths": { "@/*": ["./*"] }`
 Non regredire questo file negli ZIP futuri.
+
+## Decisione UI v0.5 — Homepage master design
+La homepage condivisa nello screen 1 diventa il riferimento visivo maestro del portale BeautyBenessere.it.
+
+Indicazioni confermate:
+- homepage editoriale, calda, elegante e fotografica;
+- header più raffinato con logo in stile loto/benessere e accenti oro;
+- hero con immagine/atmosfera spa, testo grande a sinistra e ricerca integrata;
+- categorie in card compatte con icone oro;
+- teaser mappa con marker e CTA;
+- città in evidenza con card visuali;
+- box gestori/rivendicazione attività in stile premium;
+- risultati e scheda attività dovranno essere riallineati a questa homepage master nei prossimi step.
+
+Vincoli confermati:
+- non collegare ancora Firebase;
+- non introdurre Google Maps reale nello Step 004;
+- preservare il fix stabile di `tsconfig.json` con `baseUrl` e `paths` per alias `@/*`.
