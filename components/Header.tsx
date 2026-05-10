@@ -1,11 +1,32 @@
 import { siteConfig } from "@/lib/site";
 
-const navItems = [
-  { label: "Categorie", href: "/#categorie", hasChevron: true },
-  { label: "Città", href: "/#città", hasChevron: true },
-  { label: "Risultati", href: "/risultati" },
-  { label: "Per gestori", href: "/#per-gestori" },
-  { label: "Rivendica attività", href: "/#rivendica-attività" }
+const categories = [
+  "Centri estetici",
+  "Parrucchieri",
+  "Barber Shop",
+  "Tattoo Studio",
+  "Piercing Studio",
+  "SPA",
+  "Centri Olistici",
+  "Solarium",
+  "Nail Center",
+  "Massaggiatori",
+  "Lash & Brow",
+  "Medicina estetica"
+];
+
+const cities = [
+  "Milano",
+  "Roma",
+  "Torino",
+  "Firenze",
+  "Bologna",
+  "Napoli",
+  "Genova",
+  "Venezia",
+  "Verona",
+  "Palermo",
+  "Tutte le città"
 ];
 
 function LotusMark() {
@@ -21,6 +42,24 @@ function LotusMark() {
   );
 }
 
+function DropdownNav({ label, items }: { label: string; items: string[] }) {
+  return (
+    <div className="nav-dropdown">
+      <button className="nav-dropdown-trigger" type="button" aria-haspopup="true">
+        <span>{label}</span>
+        <span className="nav-chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div className="nav-dropdown-menu" role="menu" aria-label={label}>
+        {items.map((item) => (
+          <a key={item} href="/risultati" role="menuitem">
+            {item}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function Header() {
   return (
     <header className="site-header">
@@ -32,12 +71,11 @@ export function Header() {
         </span>
       </a>
       <nav className="main-nav" aria-label="Navigazione principale">
-        {navItems.map((item) => (
-          <a key={item.label} href={item.href}>
-            <span>{item.label}</span>
-            {item.hasChevron ? <span className="nav-chevron" aria-hidden="true">⌄</span> : null}
-          </a>
-        ))}
+        <DropdownNav label="Categorie" items={categories} />
+        <DropdownNav label="Città" items={cities} />
+        <a href="/risultati">Risultati</a>
+        <a href="/#per-gestori">Per gestori</a>
+        <a href="/#rivendica-attività">Rivendica attività</a>
       </nav>
       <a className="header-login" href="/#accesso">
         <span className="login-icon" aria-hidden="true">

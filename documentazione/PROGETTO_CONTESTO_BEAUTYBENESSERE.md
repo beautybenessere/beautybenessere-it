@@ -192,3 +192,17 @@ Nota tecnica stabile: `tsconfig.json` deve mantenere sempre `baseUrl` e `paths` 
 - Rifinita la topbar globale per avvicinarla al riferimento premium.
 - Ridotto l'overlay sulla parte destra della hero, mantenendo il gradiente solo dove serve alla leggibilità del testo.
 - Patch senza modifiche a tsconfig.json.
+
+## Fix Step 004 — Topbar dropdown Categorie e Città
+
+La topbar pubblica è stata corretta per usare dropdown premium su **Categorie** e **Città**. Le voci sono statiche demo e rimandano provvisoriamente alla pagina `/risultati`.
+
+Categorie demo incluse:
+Centri estetici, Parrucchieri, Barber Shop, Tattoo Studio, Piercing Studio, SPA, Centri Olistici, Solarium, Nail Center, Massaggiatori, Lash & Brow, Medicina estetica.
+
+Città demo incluse:
+Milano, Roma, Torino, Firenze, Bologna, Napoli, Genova, Venezia, Verona, Palermo, Tutte le città.
+
+Nota tecnica:
+- dropdown realizzati senza Firebase e senza logiche dinamiche;
+- `tsconfig.json` resta protetto e non è stato incluso nella patch.

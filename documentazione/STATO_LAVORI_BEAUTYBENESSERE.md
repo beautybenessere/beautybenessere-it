@@ -204,3 +204,15 @@ Completata la rifinitura dell'header globale pubblico per avvicinarlo al riferim
 - Rifinita la topbar globale per avvicinarla al riferimento premium.
 - Ridotto l'overlay sulla parte destra della hero, mantenendo il gradiente solo dove serve alla leggibilità del testo.
 - Patch senza modifiche a tsconfig.json.
+
+## Fix Step 004 — Topbar dropdown Categorie e Città
+
+Completato fix della topbar pubblica: le voci **Categorie** e **Città** non sono più semplici ancore di scroll, ma dropdown premium statici demo coerenti con il portale directory.
+
+Interventi:
+- aggiunto dropdown Categorie con voci principali Beauty e Benessere;
+- aggiunto dropdown Città con città demo principali;
+- ogni voce punta provvisoriamente a `/risultati`;
+- mantenuto stile editoriale, caldo e premium;
+- nessun collegamento Firebase introdotto;
+- nessuna modifica a `tsconfig.json`.
