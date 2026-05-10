@@ -214,3 +214,6 @@ Quando Marco chiede una modifica al font dell’header o della hero, distinguere
 - titolo hero;
 - bottone Accedi.
 Nel caso dello Step 004, la modifica richiesta riguarda il titolo hero “Trova attività Beauty e Benessere vicino a te”, non il logo testuale “Beauty Benessere”. Il logo non va modificato salvo richiesta esplicita.
+
+## Nota operativa — Dropdown topbar Step 004
+I dropdown `Categorie` e `Città` devono funzionare senza chiudersi quando il cursore passa dal trigger al menu. Per ottenere questo comportamento è stato aggiunto un ponte hover invisibile e il menu è stato avvicinato al trigger. Non modificare logo o font del logo se non richiesto esplicitamente.

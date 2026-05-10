@@ -221,3 +221,9 @@ Interventi:
 - Corretto lo scope della modifica font: il cambio riguarda il titolo hero “Trova attività Beauty e Benessere vicino a te”.
 - Il logo testuale dell’header non deve essere modificato salvo richiesta esplicita.
 - Aggiunta variabile `--font-hero` dedicata al titolo hero.
+
+## Fix Step 004 — Dropdown topbar: hover stabile e freccia più vicina
+- Corretto il comportamento dei dropdown `Categorie` e `Città`: il menu resta aperto mentre si scende dal titolo alle voci.
+- Ridotto lo spazio verticale tra trigger e pannello dropdown.
+- Avvicinata la micro-freccia al testo dell'etichetta del menu.
+- Nessuna modifica a logo, hero, risultati, scheda attività, Firebase o `tsconfig.json`.
