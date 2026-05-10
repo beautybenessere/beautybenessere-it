@@ -160,3 +160,15 @@ La homepage master deve mantenere lo stile dello screen 1, ma con proporzioni pi
 La homepage resta il riferimento visivo da cui allineare risultati e scheda attività nei prossimi step.
 
 Nota tecnica stabile: `tsconfig.json` non deve regredire e deve mantenere `baseUrl` e `paths` per gli alias `@/*`.
+
+## Decisione UI v0.5.2 — Immagine hero homepage ufficiale
+La foto 2 fornita dall’utente è stata scelta come immagine hero della homepage master perché più coerente con il posizionamento SPA/relax premium del portale.
+
+Indicazioni confermate:
+- usare immagine locale nel progetto, non URL esterno;
+- mantenere atmosfera calda, luminosa, elegante e benessere;
+- evitare tagli eccessivi o zoom troppo aggressivi nella hero;
+- preservare testo leggibile a sinistra e ricerca premium integrata;
+- homepage master resta la base visiva per riallineare risultati e scheda attività.
+
+Nota tecnica stabile: `tsconfig.json` non deve regredire e deve mantenere `baseUrl` e `paths` per gli alias `@/*`.

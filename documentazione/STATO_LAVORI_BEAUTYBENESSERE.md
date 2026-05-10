@@ -168,3 +168,21 @@ Nessuno.
 
 ## File eliminati nel Fix Step 004 Hero
 Nessuno.
+
+## Fix Step 004 — Sostituzione immagine hero con foto 2
+- Sostituita l’immagine hero della homepage con la foto 2 fornita dall’utente, più coerente con lo stile SPA premium dello screen 1.
+- Aggiunta immagine locale in `public/images/home-hero-spa.jpeg` per evitare dipendenza da URL esterni.
+- Regolate posizione e dimensione della hero per ridurre tagli e valorizzare meglio il soggetto.
+- Preservati header, box ricerca, categorie, risultati, scheda attività e fix stabile `tsconfig.json` con alias `@/*`.
+
+## File creati nel Fix Step 004 Foto 2
+- public/images/home-hero-spa.jpeg
+- documentazione/report/REPORT_STEP_004_FIX_SOSTITUZIONE_IMMAGINE_HERO_FOTO_2.md
+
+## File modificati nel Fix Step 004 Foto 2
+- app/globals.css
+- documentazione/STATO_LAVORI_BEAUTYBENESSERE.md
+- documentazione/PROGETTO_CONTESTO_BEAUTYBENESSERE.md
+
+## File eliminati nel Fix Step 004 Foto 2
+Nessuno.
