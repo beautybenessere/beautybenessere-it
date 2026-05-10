@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Fraunces, Manrope } from "next/font/google";
+import { Bodoni_Moda, Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 
 
-const cormorant = Cormorant_Garamond({
+const bodoni = Bodoni_Moda({
   subsets: ["latin"],
   variable: "--font-brand",
   display: "swap",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="it" className={`${cormorant.variable} ${fraunces.variable} ${manrope.variable}`}>
+    <html lang="it" className={`${bodoni.variable} ${fraunces.variable} ${manrope.variable}`}>
       <body>{children}</body>
     </html>
   );

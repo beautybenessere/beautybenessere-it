@@ -185,3 +185,10 @@ Nota tecnica stabile: `tsconfig.json` non deve regredire e deve mantenere `baseU
 L'header pubblico di BeautyBenessere.it è stato allineato alla direzione dello screen 1: identità più editoriale, font logo serif elegante, icona loto valorizzata, menu più pulito e bottone Accedi leggero con bordo oro soft. Questo header diventa riferimento globale per le pagine pubbliche del portale.
 
 Nota tecnica stabile: `tsconfig.json` deve mantenere sempre `baseUrl` e `paths` per gli alias `@/*`; non sovrascrivere con versioni precedenti.
+
+
+## Fix Step 004 — Header più vicino allo screen 1 e hero più nitida
+- Rafforzato il font del logo testuale con serif editoriale più marcato.
+- Rifinita la topbar globale per avvicinarla al riferimento premium.
+- Ridotto l'overlay sulla parte destra della hero, mantenendo il gradiente solo dove serve alla leggibilità del testo.
+- Patch senza modifiche a tsconfig.json.

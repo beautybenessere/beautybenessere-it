@@ -197,3 +197,10 @@ Nessuno.
 ## Step 004 Fix — Header premium come screen 1
 
 Completata la rifinitura dell'header globale pubblico per avvicinarlo al riferimento visivo indicato: logo testuale più editoriale, navigazione più raffinata, micro-frecce su Categorie/Città e bottone Accedi più leggero con bordo oro soft. Preservato il fix stabile di `tsconfig.json` per gli alias `@/*`.
+
+
+## Fix Step 004 — Header più vicino allo screen 1 e hero più nitida
+- Rafforzato il font del logo testuale con serif editoriale più marcato.
+- Rifinita la topbar globale per avvicinarla al riferimento premium.
+- Ridotto l'overlay sulla parte destra della hero, mantenendo il gradiente solo dove serve alla leggibilità del testo.
+- Patch senza modifiche a tsconfig.json.
