@@ -1809,8 +1809,8 @@ body {
     radial-gradient(circle at 66% 48%, rgba(201, 163, 90, 0.16), transparent 18rem),
     url("/images/home-hero-spa.jpeg");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: left center, center right, right center;
-  background-size: auto, auto, min(1120px, 66vw) auto;
+  background-position: left center, center right, center center;
+  background-size: auto, auto, cover;
   border-bottom: 1px solid rgba(211, 190, 150, 0.18);
 }
 
@@ -2262,7 +2262,7 @@ body {
       linear-gradient(90deg, rgba(255, 253, 248, 0.98), rgba(255, 253, 248, 0.78)),
       radial-gradient(circle at 70% 35%, rgba(201, 163, 90, 0.14), transparent 16rem),
       url("/images/home-hero-spa.jpeg");
-    background-position: left center, center right, right center;
+    background-position: left center, center right, center center;
     background-size: auto, auto, cover;
   }
 }

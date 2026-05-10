@@ -172,3 +172,10 @@ Indicazioni confermate:
 - homepage master resta la base visiva per riallineare risultati e scheda attività.
 
 Nota tecnica stabile: `tsconfig.json` non deve regredire e deve mantenere `baseUrl` e `paths` per gli alias `@/*`.
+
+## Step 004 — Fix hero foto non interrotta
+
+- Corretta la visualizzazione della foto 2 nella hero homepage.
+- La foto ora copre tutta l’area hero senza risultare interrotta sul lato destro.
+- Preservato il fix stabile di `tsconfig.json` con `baseUrl` e alias `@/*`.
+

@@ -186,3 +186,10 @@ Nessuno.
 
 ## File eliminati nel Fix Step 004 Foto 2
 Nessuno.
+
+## Step 004 — Fix hero foto non interrotta
+
+- Corretta la visualizzazione della foto 2 nella hero homepage.
+- La foto ora copre tutta l’area hero senza risultare interrotta sul lato destro.
+- Preservato il fix stabile di `tsconfig.json` con `baseUrl` e alias `@/*`.
+
