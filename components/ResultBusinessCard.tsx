@@ -37,7 +37,7 @@ export function ResultBusinessCard({ business, index }: ResultBusinessCardProps)
         </div>
 
         <div className="result-actions">
-          <a className="primary-result-action" href={`/attivita/${business.id}`}>Apri scheda</a>
+          <a className="primary-result-action" href={`/attivita/${business.slug}`}>Apri scheda</a>
           <a href={`tel:${business.phone.replaceAll(" ", "")}`}>Chiama</a>
           <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${business.name} ${business.address} ${business.city}`)}`}>Indicazioni</a>
         </div>

@@ -16,14 +16,14 @@ Attività:
 ## Fase 1 — MVP pubblico
 Obiettivo: prima versione pubblica consultabile.
 
-Stato: avviata nella versione v0.2 con homepage pubblica demo e ampliata nella v0.3 con prima pagina risultati lista + mappa demo.
+Stato: avviata nella versione v0.2 con homepage pubblica demo, ampliata nella v0.3 con prima pagina risultati lista + mappa demo e nella v0.4 con prima scheda attività pubblica dinamica.
 
 Funzioni:
 - homepage;
 - ricerca attività;
 - lista risultati; completata prima versione demo in v0.3;
 - vista mappa; completata prima versione placeholder in v0.3;
-- scheda attività;
+- scheda attività; completata prima versione demo in v0.4;
 - categorie principali;
 - città principali.
 
@@ -43,7 +43,7 @@ Funzioni:
 Obiettivo: permettere ai gestori di richiedere la gestione della scheda.
 
 Funzioni:
-- pulsante “Rivendica attività”;
+- pulsante “Rivendica attività”; prima CTA demo presente nelle schede attività in v0.4;
 - modulo rivendicazione;
 - salvataggio richiesta;
 - notifica admin;

@@ -4,10 +4,10 @@
 2026-05-10
 
 ## Versione
-v0.3 — Pagina risultati lista + mappa
+v0.4 — Scheda attività pubblica demo
 
 ## Stato generale
-Progetto avviato dalla documentazione iniziale. È stata creata una base Next.js per il portale pubblico SEO-oriented, con homepage demo, design system applicato, dati provvisori e prima pagina risultati con filtri, lista attività e placeholder mappa.
+Progetto avviato dalla documentazione iniziale. È stata creata una base Next.js per il portale pubblico SEO-oriented, con homepage demo, design system applicato, dati provvisori, prima pagina risultati con filtri/lista/mappa e prima scheda attività pubblica dinamica.
 
 ## Decisioni già prese
 - Dominio scelto: beautybenessere.it
@@ -24,6 +24,7 @@ Progetto avviato dalla documentazione iniziale. È stata creata una base Next.js
 - Mappe: Google Maps Platform.
 - Front-end pubblico SEO: base iniziale impostata con Next.js, pronta per deploy su Vercel.
 - Pagina risultati pubblica `/risultati` creata con layout lista + mappa e dati demo locali.
+- Scheda attività pubblica dinamica `/attivita/[slug]` creata e collegata ai risultati.
 
 ## Step completati
 
@@ -41,6 +42,31 @@ Progetto avviato dalla documentazione iniziale. È stata creata una base Next.js
 - Card attività premium e leggibili.
 - Dati demo locali predisposti per futura migrazione Firestore.
 - Placeholder mappa predisposto per Google Maps Platform.
+
+
+### Step 003 — Scheda attività pubblica
+- Route dinamica `/attivita/[slug]`.
+- Collegamento dalle card risultati alla pagina dettaglio.
+- Dataset demo ampliato con slug, contatti, sito, email, orari, servizi, punti di forza, informazioni utili e descrizione estesa.
+- Scheda pubblica con hero, badge, contatti, servizi, orari, mappa demo e CTA “Rivendica attività”.
+- Metadata dinamica e JSON-LD `LocalBusiness` per SEO locale.
+- Layout responsive desktop/tablet/mobile.
+
+## File creati nello Step 003
+- app/attivita/[slug]/page.tsx
+- documentazione/report/REPORT_STEP_003_SCHEDA_ATTIVITA_PUBBLICA.md
+
+## File modificati nello Step 003
+- app/globals.css
+- components/ResultBusinessCard.tsx
+- data/resultsBusinesses.ts
+- README.md
+- documentazione/STATO_LAVORI_BEAUTYBENESSERE.md
+- documentazione/PROGETTO_CONTESTO_BEAUTYBENESSERE.md
+- documentazione/ROADMAP_BEAUTYBENESSERE.md
+
+## File eliminati nello Step 003
+Nessuno.
 
 ## File creati nello Step 002
 - app/risultati/page.tsx
@@ -63,12 +89,12 @@ Progetto avviato dalla documentazione iniziale. È stata creata una base Next.js
 Nessuno.
 
 ## Prossime attività consigliate
-1. Creare scheda attività pubblica dinamica.
-2. Collegare le card risultato alla scheda attività.
-3. Definire dataset demo più completo per attività/città/categorie.
-4. Preparare configurazione Firebase client.
-5. Creare modello iniziale per ricerca keyword/città/categoria.
-6. Creare admin base per attività e categorie.
+1. Creare modulo “Rivendica attività” dedicato.
+2. Definire dataset demo più completo per attività/città/categorie.
+3. Preparare configurazione Firebase client.
+4. Creare modello iniziale per ricerca keyword/città/categoria.
+5. Creare admin base per attività e categorie.
+6. Preparare pagine SEO per categoria/città.
 
 ## Note importanti
 Ogni futura modifica deve aggiornare i file `.md` quando introduce decisioni, regole o cambiamenti importanti.

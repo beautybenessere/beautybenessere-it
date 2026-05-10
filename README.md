@@ -3,7 +3,7 @@
 Portale/directory nazionale per attività Beauty e Benessere.
 
 ## Stato
-v0.3 — Base portale pubblico con homepage e prima pagina risultati lista + mappa demo.
+v0.4 — Base portale pubblico con homepage, risultati lista + mappa e scheda attività pubblica demo.
 
 ## Dominio
 beautybenessere.it
@@ -54,3 +54,4 @@ npm run build
 
 - `/` — homepage pubblica SEO-oriented
 - `/risultati` — pagina risultati demo con filtri, lista attività e placeholder mappa
+- `/attivita/[slug]` — scheda attività pubblica demo con dati strutturati LocalBusiness

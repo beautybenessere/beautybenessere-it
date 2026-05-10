@@ -85,3 +85,28 @@ Vincoli confermati:
 - nessun collegamento Firebase nello Step 002;
 - nessun collegamento reale Google Maps nello Step 002;
 - testi sempre leggibili, con base 16px dove possibile e senza microtesti sotto 14px.
+
+
+## Decisione tecnica v0.4 — Scheda attività pubblica
+È stata creata la prima scheda attività pubblica dinamica in `/attivita/[slug]`.
+
+La pagina usa ancora dati demo locali, ma è predisposta per diventare una scheda reale alimentata da Firestore.
+
+Elementi presenti:
+- metadata dinamica per ogni attività;
+- JSON-LD `LocalBusiness` per SEO locale;
+- hero attività con badge verificato, premium e prenotazione online;
+- descrizione attività;
+- servizi principali;
+- punti di forza;
+- contatti rapidi;
+- orari;
+- informazioni utili;
+- mappa demo;
+- CTA “Rivendica attività”.
+
+Vincoli confermati:
+- nessun collegamento Firebase nello Step 003;
+- nessuna integrazione reale Google Maps nello Step 003;
+- dati demo locali in attesa di modello Firestore definitivo;
+- scheda già collegata dalla pagina risultati tramite slug.
