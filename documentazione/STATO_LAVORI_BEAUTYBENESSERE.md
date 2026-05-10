@@ -216,3 +216,8 @@ Interventi:
 - mantenuto stile editoriale, caldo e premium;
 - nessun collegamento Firebase introdotto;
 - nessuna modifica a `tsconfig.json`.
+
+## Step 004 — Fix font titolo hero homepage, senza modificare logo
+- Corretto lo scope della modifica font: il cambio riguarda il titolo hero “Trova attività Beauty e Benessere vicino a te”.
+- Il logo testuale dell’header non deve essere modificato salvo richiesta esplicita.
+- Aggiunta variabile `--font-hero` dedicata al titolo hero.

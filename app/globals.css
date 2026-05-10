@@ -2729,3 +2729,22 @@ body {
     transform: translate(0, 0);
   }
 }
+
+/* Fix Step 004 — Font solo titolo hero homepage, senza modificare il logo */
+.brand strong {
+  font-family: var(--font-title), Georgia, "Times New Roman", serif;
+}
+
+.home-master-hero h1 {
+  font-family: var(--font-hero), Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+@media (max-width: 700px) {
+  .home-master-hero h1 {
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+  }
+}

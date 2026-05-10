@@ -206,3 +206,11 @@ Milano, Roma, Torino, Firenze, Bologna, Napoli, Genova, Venezia, Verona, Palermo
 Nota tecnica:
 - dropdown realizzati senza Firebase e senza logiche dinamiche;
 - `tsconfig.json` resta protetto e non è stato incluso nella patch.
+
+## Regola operativa — Font header/hero
+Quando Marco chiede una modifica al font dell’header o della hero, distinguere sempre l’elemento preciso:
+- logo/brand testuale;
+- menu/topbar;
+- titolo hero;
+- bottone Accedi.
+Nel caso dello Step 004, la modifica richiesta riguarda il titolo hero “Trova attività Beauty e Benessere vicino a te”, non il logo testuale “Beauty Benessere”. Il logo non va modificato salvo richiesta esplicita.
