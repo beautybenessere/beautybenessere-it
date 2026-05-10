@@ -151,7 +151,7 @@ export default function ActivityPage({ params }: ActivityPageProps) {
               {business.highlights.map((highlight) => (
                 <div key={highlight}>
                   <strong>{highlight}</strong>
-                  <p>Informazione demo predisposta per essere sostituita dai dati reali caricati dal gestore o dall'admin.</p>
+                  <p>Informazione demo predisposta per essere sostituita dai dati reali caricati dal gestore o dall&apos;admin.</p>
                 </div>
               ))}
             </div>
@@ -163,7 +163,7 @@ export default function ActivityPage({ params }: ActivityPageProps) {
                 <span className="eyebrow">Gestore attività</span>
                 <h2>Questa è la tua attività?</h2>
                 <p>
-                  Rivendica la scheda per aggiornare informazioni, servizi, orari, foto e contatti quando sarà attiva l'area gestore di BeautyBenessere.it.
+                  Rivendica la scheda per aggiornare informazioni, servizi, orari, foto e contatti quando sarà attiva l&apos;area gestore di BeautyBenessere.it.
                 </p>
               </div>
               <a className="activity-primary-action" href="mailto:claim@beautybenessere.it">Rivendica attività</a>
