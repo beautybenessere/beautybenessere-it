@@ -179,3 +179,9 @@ Nota tecnica stabile: `tsconfig.json` non deve regredire e deve mantenere `baseU
 - La foto ora copre tutta l’area hero senza risultare interrotta sul lato destro.
 - Preservato il fix stabile di `tsconfig.json` con `baseUrl` e alias `@/*`.
 
+
+## Decisione UI — Header premium globale
+
+L'header pubblico di BeautyBenessere.it è stato allineato alla direzione dello screen 1: identità più editoriale, font logo serif elegante, icona loto valorizzata, menu più pulito e bottone Accedi leggero con bordo oro soft. Questo header diventa riferimento globale per le pagine pubbliche del portale.
+
+Nota tecnica stabile: `tsconfig.json` deve mantenere sempre `baseUrl` e `paths` per gli alias `@/*`; non sovrascrivere con versioni precedenti.

@@ -193,3 +193,7 @@ Nessuno.
 - La foto ora copre tutta l’area hero senza risultare interrotta sul lato destro.
 - Preservato il fix stabile di `tsconfig.json` con `baseUrl` e alias `@/*`.
 
+
+## Step 004 Fix — Header premium come screen 1
+
+Completata la rifinitura dell'header globale pubblico per avvicinarlo al riferimento visivo indicato: logo testuale più editoriale, navigazione più raffinata, micro-frecce su Categorie/Città e bottone Accedi più leggero con bordo oro soft. Preservato il fix stabile di `tsconfig.json` per gli alias `@/*`.

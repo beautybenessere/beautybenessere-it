@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Cormorant_Garamond, Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
+
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-brand",
+  display: "swap",
+  weight: ["500", "600", "700"]
+});
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -31,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="it" className={`${fraunces.variable} ${manrope.variable}`}>
+    <html lang="it" className={`${cormorant.variable} ${fraunces.variable} ${manrope.variable}`}>
       <body>{children}</body>
     </html>
   );
